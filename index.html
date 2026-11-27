@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chirag Salvi | Martial Arts Coach, Self-Defense Educator &amp; Fitness Mentor</title>
+<meta name="description" content="Personal website of Chirag Salvi – Martial Arts Coach, Self-Defense Educator and Fitness Mentor. Founder of Battle Fit Academy, Mumbai.">
+<meta property="og:title" content="Chirag Salvi – Martial Arts Coach &amp; Self-Defense Educator">
+<meta property="og:description" content="12+ years of experience · 600+ workshops · 1,000+ people empowered. Founder of Battle Fit Academy, Mumbai.">
+<meta property="og:image" content="chirag.jpg">
+<meta property="og:type" content="profile">
+<link rel="icon" href="chirag.jpg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Chirag Salvi","jobTitle":"Martial Arts Coach & Self-Defense Educator","telephone":"+91 98208 42939","email":"cvsalvi95@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"},"worksFor":{"@type":"Organization","name":"Battle Fit Academy","url":"https://www.battlefitacademy.com/"},"alumniOf":"Singhania University"}
+</script>
+<style>
+:root{
+  --orange:#f26b1d; --orange-dark:#d9540a; --orange-soft:#fff1e8;
+  --ink:#141414; --text:#2b2b2b; --muted:#5b5b5b; --line:#ececec;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Roboto',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+h1,h2,h3,h4,.cond{font-family:'Barlow Condensed',sans-serif}
+.accent{color:var(--orange)}
+section{position:relative}
+
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--orange),#ffb347);z-index:2000;transition:width .1s}
+
+[data-reveal]{opacity:0;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+[data-reveal="up"]{transform:translateY(40px)}
+[data-reveal="left"]{transform:translateX(-60px)}
+[data-reveal="right"]{transform:translateX(60px)}
+[data-reveal="zoom"]{transform:scale(.88)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ---------- NAV (personal brand) ---------- */
+.navbar{background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:2px solid var(--orange);padding:.5rem 0;position:sticky;top:0;z-index:1500;transition:box-shadow .3s}
+.navbar.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.brand .mono{width:46px;height:46px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-family:'Barlow Condensed';font-weight:800;font-size:1.5rem;letter-spacing:1px;box-shadow:0 5px 14px rgba(242,107,29,.45);transition:transform .5s}
+.brand:hover .mono{transform:rotate(360deg)}
+.brand b{display:block;font-family:'Barlow Condensed';font-size:1.45rem;color:var(--ink);line-height:1}
+.brand small{display:block;color:var(--muted);font-size:.7rem;letter-spacing:.8px;text-transform:uppercase}
+.nav-link{color:var(--ink)!important;font-weight:500;font-size:.95rem;padding:.4rem .85rem!important;position:relative}
+.nav-link::after{content:"";position:absolute;left:50%;right:50%;bottom:-4px;height:3px;background:var(--orange);border-radius:2px;transition:.3s}
+.nav-link:hover::after,.nav-link.active::after{left:.85rem;right:.85rem}
+.nav-link.active,.nav-link:hover{color:var(--orange)!important}
+.btn-bf{position:relative;overflow:hidden;background:var(--orange);color:#fff;border:2px solid var(--orange);border-radius:50px;padding:.65rem 1.5rem;font-weight:700;letter-spacing:.2px;box-shadow:0 6px 16px rgba(242,107,29,.35);transition:.25s;cursor:pointer}
+.btn-bf::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 3.2s infinite}
+@keyframes shine{0%,60%{left:-80%}100%{left:140%}}
+.btn-bf:hover{background:var(--orange-dark);border-color:var(--orange-dark);color:#fff;transform:translateY(-3px);box-shadow:0 10px 22px rgba(242,107,29,.45)}
+.btn-bf i{transition:transform .25s}
+.btn-bf:hover i{transform:translateX(4px)}
+.btn-ghost{background:#fff;color:var(--orange);border-color:var(--orange);box-shadow:none}
+.btn-ghost::before{display:none}
+.btn-ghost:hover{background:var(--orange);color:#fff}
+
+/* ---------- HERO ---------- */
+.hero{background:linear-gradient(100deg,#fff 0%,#fff 40%,#fdf2ea 100%);overflow:hidden;padding:2.8rem 0 0}
+.hero .stripe{position:absolute;background:var(--orange);transform:skewX(-28deg);z-index:0}
+.hero .s1{right:-40px;top:-10px;width:70px;height:55%;animation:slideDown 1.2s ease both}
+.hero .s2{right:90px;bottom:0;width:26px;height:40%;opacity:.8;animation:slideUp 1.2s .2s ease both}
+.hero .s3{left:-60px;top:55%;width:40px;height:35%;opacity:.15}
+@keyframes slideDown{from{transform:skewX(-28deg) translateY(-120%)}to{transform:skewX(-28deg) translateY(0)}}
+@keyframes slideUp{from{transform:skewX(-28deg) translateY(120%)}to{transform:skewX(-28deg) translateY(0)}}
+.hero .container{position:relative;z-index:2}
+.hero .kicker{color:var(--orange);font-weight:800;font-size:2rem;letter-spacing:1px;text-transform:uppercase;line-height:1}
+.hero .kicker .wave{display:inline-block;animation:wave 2.2s infinite;transform-origin:70% 70%}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-8deg)}50%{transform:rotate(10deg)}}
+.hero h1{font-size:clamp(3rem,7vw,5.2rem);font-weight:800;color:var(--ink);line-height:1;margin:.3rem 0 .6rem}
+.hero .roles{font-weight:700;font-size:1.05rem;color:var(--ink)}
+.hero .roles span{margin:0 .5rem;color:#999;font-weight:400}
+.founder-tag{display:inline-flex;align-items:center;gap:.5rem;margin-top:.8rem;padding:.3rem .9rem;border-radius:50px;background:var(--orange-soft);color:var(--orange-dark);font-size:.88rem;font-weight:500;text-decoration:none;transition:.25s}
+.founder-tag:hover{background:var(--orange);color:#fff}
+.typed-line{margin-top:.8rem;font-size:1.15rem;font-weight:500;color:var(--muted);min-height:1.8rem}
+.typed-line b{color:var(--orange)}
+.typed-line .caret{display:inline-block;width:2px;height:1.2em;background:var(--orange);margin-left:2px;vertical-align:-3px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.ribbon{display:inline-block;margin-top:1rem;background:linear-gradient(90deg,var(--orange),#ff8a3d 80%,rgba(255,138,61,0));padding:.55rem 4rem .55rem 1rem;color:#fff;font-family:'Barlow Condensed';font-size:1.9rem;font-style:italic;font-weight:700;letter-spacing:.5px;transform:skewX(-8deg)}
+.ribbon>span{display:inline-block;transform:skewX(8deg)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.3rem}
+.stats{display:flex;flex-wrap:wrap;margin-top:1.5rem;padding-bottom:1.6rem}
+.stat{display:flex;align-items:center;gap:.75rem;padding:0 1.4rem;border-right:2px solid var(--orange)}
+.stat:first-child{padding-left:0}.stat:last-child{border-right:0}
+.stat i{color:var(--orange);font-size:2.1rem;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.stat b{display:block;font-family:'Barlow Condensed';font-size:2rem;color:var(--ink);line-height:1}
+.stat small{color:var(--muted);font-size:.8rem;line-height:1.1;display:block}
+
+.hero-media{position:relative;margin-bottom:1.8rem}
+.hero-frame{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.3);border-bottom:6px solid var(--orange);aspect-ratio:4/3;background:linear-gradient(135deg,#2a2a2a,#555)}
+.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center;animation:kenburns 14s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.55))}
+.hero-cap{position:absolute;left:16px;bottom:12px;z-index:2;color:#fff;font-family:'Barlow Condensed';font-size:1.25rem;font-weight:700;letter-spacing:.5px}
+.hero-cap i{color:var(--orange);margin-right:.4rem}
+.float-card{position:absolute;left:-28px;top:34px;z-index:3;background:#fff;border-radius:14px;padding:.6rem .9rem .6rem .6rem;display:flex;align-items:center;gap:.7rem;box-shadow:0 14px 30px rgba(0,0,0,.2);animation:floaty 4s ease-in-out infinite}
+.float-card img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid var(--orange);background:#2a2a2a}
+.float-card b{display:block;font-family:'Barlow Condensed';font-size:1.15rem;color:var(--ink);line-height:1.1}
+.float-card small{color:var(--muted);font-size:.75rem}
+.badge-float{position:absolute;right:-12px;top:-14px;z-index:3;background:var(--orange);color:#fff;border-radius:50%;width:84px;height:84px;display:grid;place-items:center;text-align:center;font-family:'Barlow Condensed';font-weight:800;line-height:1;box-shadow:0 10px 24px rgba(242,107,29,.5);animation:floaty 4s 1s ease-in-out infinite}
+.badge-float span{font-size:1.9rem;display:block}.badge-float small{font-size:.72rem;letter-spacing:.5px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ---------- ABOUT ---------- */
+.about{background:linear-gradient(180deg,#f7f7f7,#fff);padding:3.2rem 0;border-top:1px solid var(--line)}
+.profile-wrap{position:relative;max-width:270px;margin:auto}
+.profile-wrap::before{content:"";position:absolute;inset:-12px 12px 12px -12px;border:4px solid var(--orange);border-radius:18px;z-index:0;transition:.4s}
+.profile-wrap::after{content:"";position:absolute;right:-18px;bottom:-18px;width:90px;height:90px;background:radial-gradient(var(--orange) 2px,transparent 2.5px) 0 0/12px 12px;z-index:0;opacity:.7}
+.profile-wrap:hover::before{inset:-6px 6px 6px -6px}
+.profile-wrap img{position:relative;z-index:1;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 12%;border-radius:18px;display:block;box-shadow:0 18px 38px rgba(0,0,0,.28);background:#2a2a2a;transition:transform .5s}
+.profile-wrap:hover img{transform:scale(1.03)}
+.sec-title{font-size:2.3rem;font-weight:700;color:var(--ink);margin-bottom:.8rem;position:relative}
+.eyebrow{display:block;font-family:'Barlow Condensed';font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);font-size:1rem;margin-bottom:.1rem}
+.about p{font-size:.95rem;line-height:1.6;margin-bottom:.8rem}
+.about-mid{border-right:2px solid var(--orange);padding-right:1.5rem}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.facts span{display:inline-flex;align-items:center;gap:.45rem;background:#fff;border:1px solid var(--line);border-radius:50px;padding:.3rem .8rem;font-size:.82rem;font-weight:500;box-shadow:0 3px 10px rgba(0,0,0,.05)}
+.facts i{color:var(--orange)}
+.comp-list{list-style:none;padding:0;margin:0}
+.comp-list li{display:flex;align-items:center;gap:.9rem;margin-bottom:.7rem;font-size:.95rem;font-weight:500;line-height:1.2;padding:.35rem .5rem;border-radius:50px;transition:.3s}
+.comp-list li:hover{background:var(--orange-soft);transform:translateX(8px)}
+.comp-list .ic{flex:0 0 46px;height:46px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:1.15rem;box-shadow:0 5px 12px rgba(242,107,29,.35);transition:.4s}
+.comp-list li:hover .ic{transform:rotate(360deg)}
+
+/* ---------- HIGHLIGHTS / EDU ---------- */
+.highlights{padding:3rem 0;border-top:1px solid var(--line);background:#fff}
+.check-list{list-style:none;padding:0;margin:0}
+.check-list li{position:relative;padding-left:2rem;margin-bottom:.65rem;font-size:.95rem;font-weight:500;transition:transform .3s}
+.check-list li:hover{transform:translateX(6px)}
+.check-list li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--orange);color:#fff;font-size:.68rem;display:grid;place-items:center}
+.hl-col{border-right:1px solid var(--line);padding-right:1.5rem}
+.edu-card{background:#fff;border-radius:12px;box-shadow:0 6px 22px rgba(0,0,0,.09);padding:1.1rem;height:100%;border:1px solid #f1f1f1;transition:.35s}
+.edu-card:hover{transform:translateY(-8px);box-shadow:0 16px 34px rgba(242,107,29,.22)}
+.edu-card h4{font-family:'Barlow Condensed';font-weight:700;font-size:1.35rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+.edu-card.edu{text-align:center}
+.edu-card.edu h4{justify-content:center;color:var(--orange)}
+.edu-card.cert h4{color:var(--orange);font-size:1.15rem}
+.edu-card h4 i{color:var(--ink)}
+.edu-card p,.edu-card li{font-size:.85rem;line-height:1.45}
+.dot-list{list-style:none;padding:0;margin:0}
+.dot-list li{position:relative;padding-left:.9rem;margin-bottom:.35rem}
+.dot-list li::before{content:"";position:absolute;left:0;top:.5em;width:5px;height:5px;background:var(--orange);border-radius:50%}
+
+/* ---------- WORKED WITH ---------- */
+.worked{padding:2.8rem 0;border-top:1px solid var(--line);background:linear-gradient(180deg,#fff,#faf7f4)}
+.worked .check-list li{font-size:.92rem;font-weight:400;margin-bottom:.55rem}
+.worked .check-list li b{font-weight:700;color:var(--ink)}
+.worked .col-split{border-right:1px solid var(--orange);padding-right:1.5rem}
+
+/* ---------- PHILOSOPHY ---------- */
+.philosophy{background:#141414;overflow:hidden;color:#fff;min-height:340px;display:flex;align-items:center}
+.phil-bg{position:absolute;inset:-12% 0;background:url('https://images.pexels.com/photos/3340319/pexels-photo-3340319.jpeg?auto=compress&w=1260&h=750&dpr=1') center/cover no-repeat,linear-gradient(135deg,#222,#444);will-change:transform}
+.philosophy::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(242,107,29,.92) 0%,rgba(20,20,20,.88) 55%,rgba(20,20,20,.7) 100%)}
+.philosophy .container{position:relative;z-index:2;padding-top:3rem;padding-bottom:3rem}
+.philosophy h2{font-size:2.4rem;font-weight:700;color:#fff}
+.philosophy h2 .accent{color:#ffb27a}
+.philosophy blockquote{position:relative;margin:0;padding:0 3rem 0 3.4rem;font-size:1.3rem;font-style:italic;line-height:1.6}
+.philosophy .sign{margin-top:1rem;padding-left:3.4rem;font-family:'Barlow Condensed';font-weight:700;font-size:1.2rem;letter-spacing:.5px}
+.philosophy .sign::before{content:"";display:inline-block;width:36px;height:3px;background:var(--orange);vertical-align:middle;margin-right:.6rem}
+.philosophy .q{position:absolute;font-family:'Barlow Condensed';font-weight:800;font-size:5.5rem;line-height:1;color:var(--orange)}
+.philosophy .q.open{left:0;top:-10px;animation:pop 2.4s infinite}
+.philosophy .q.close{right:0;bottom:-38px;animation:pop 2.4s 1.2s infinite}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.phil-icon{position:absolute;right:6%;top:50%;transform:translateY(-50%);font-size:11rem;color:rgba(255,255,255,.08);z-index:1;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+
+/* ---------- CONTACT ---------- */
+.contact{padding:3rem 0;border-top:1px solid var(--line);background:#fff}
+.contact-card{background:linear-gradient(120deg,#fff,#fff6ef);border:1px solid #f6dccb;border-radius:20px;padding:2rem;box-shadow:0 14px 40px rgba(242,107,29,.12)}
+.c-item{display:flex;align-items:center;gap:.8rem;font-size:.95rem;font-weight:500;margin-bottom:.9rem}
+.c-item i{flex:0 0 42px;height:42px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:1.05rem;transition:transform .3s}
+.c-item:hover i{transform:scale(1.15) rotate(-10deg)}
+.c-item a{color:inherit;text-decoration:none}.c-item a:hover{color:var(--orange)}
+.c-item small{display:block;color:var(--muted);font-weight:400;font-size:.75rem}
+
+/* ---------- FOOTER ---------- */
+footer{position:relative;background:#fff;border-top:3px solid var(--orange);overflow:hidden;padding:1.3rem 0}
+footer::after{content:"";position:absolute;right:-30px;top:0;bottom:0;width:380px;background:linear-gradient(115deg,transparent 0 22%,var(--orange) 22% 30%,transparent 30% 36%,#111 36%);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%)}
+footer .container{position:relative;z-index:2}
+.f-founder small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.2rem}
+.f-founder img{height:70px;width:auto;max-width:220px;object-fit:contain;display:block}
+.f-tag{font-family:'Barlow Condensed';font-style:italic;font-weight:700;font-size:1.45rem;color:var(--ink);letter-spacing:.5px}
+.f-tag span{color:var(--orange);margin:0 .4rem}
+.f-copy{font-size:.78rem;color:var(--muted);margin-top:.2rem;font-style:normal;font-family:'Roboto'}
+.social a{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;color:#111;margin-left:.4rem;text-decoration:none;font-size:1.05rem;transition:.3s}
+.social a:hover{background:var(--orange);color:#fff;transform:translateY(-5px) rotate(360deg)}
+
+#toTop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:0;background:var(--orange);color:#fff;font-size:1.1rem;box-shadow:0 8px 20px rgba(242,107,29,.45);opacity:0;pointer-events:none;transform:translateY(20px);transition:.35s;z-index:1600}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+#wa{position:fixed;left:18px;bottom:18px;z-index:1600;background:#25d366;color:#fff;border-radius:50px;padding:.6rem 1.1rem;font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:0 8px 20px rgba(37,211,102,.45);display:flex;align-items:center;gap:.5rem;animation:floaty 3.5s ease-in-out infinite}
+#wa i{font-size:1.3rem}#wa:hover{color:#fff;background:#1ebe5a}
+
+@media(max-width:991px){
+  .about-mid{border-right:0;padding-right:0}
+  .hl-col,.worked .col-split{border-right:0;padding-right:0}
+  .hero-media{margin-top:1.5rem}
+  .float-card{left:8px}
+  footer::after{opacity:.2}
+  .phil-icon{display:none}
+}
+@media(max-width:575px){
+  .stat{padding:0 .8rem}.stat i{font-size:1.6rem}
+  .ribbon{font-size:1.4rem;padding-right:2rem}
+  .philosophy blockquote{padding:0 1.6rem 0 2.4rem;font-size:1.08rem}
+  .philosophy .sign{padding-left:2.4rem}
+  .hero .kicker{font-size:1.5rem}
+  .badge-float{width:68px;height:68px;right:-4px}.badge-float span{font-size:1.5rem}
+  .contact-card{padding:1.2rem}
+  #wa span{display:none}#wa{padding:.7rem .85rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-reveal]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg" id="home">
+  <div class="container">
+    <a class="brand" href="#home">
+      <span class="mono">CS</span>
+      <span><b>Chirag Salvi</b><small>Martial Arts Coach</small></span>
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#coach">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#highlights">Highlights</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#collaborations">Collaborations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-bf">Let's Connect <i class="fa-solid fa-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="coach">
+  <span class="stripe s1"></span><span class="stripe s2"></span><span class="stripe s3"></span>
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6 pb-lg-3">
+        <div class="kicker cond" data-reveal="up">Hi, I'm <span class="wave">👋</span></div>
+        <h1 data-reveal="up" style="--d:.1s">Chirag Salvi</h1>
+        <div class="roles" data-reveal="up" style="--d:.2s">Martial Arts Coach <span>|</span> Self-Defense Educator <span>|</span> Fitness Mentor</div>
+        <a class="founder-tag" href="https://www.battlefitacademy.com/" target="_blank" rel="noopener" data-reveal="up" style="--d:.25s"><i class="fa-solid fa-shield-halved"></i> Founder, Battle Fit Academy &middot; Mumbai</a>
+        <div class="typed-line" data-reveal="up" style="--d:.3s">Specialist in <b id="typed"></b><span class="caret"></span></div>
+        <div class="ribbon" data-reveal="left" style="--d:.4s"><span>Train &bull; Learn &bull; Be Safe</span></div>
+        <div class="hero-cta" data-reveal="up" style="--d:.45s">
+          <a href="https://wa.me/919820842939" target="_blank" rel="noopener" class="btn btn-bf"><i class="fa-brands fa-whatsapp me-1"></i> Message Me</a>
+          <button type="button" class="btn btn-bf btn-ghost" id="saveContact"><i class="fa-solid fa-address-card me-1"></i> Save Contact</button>
+        </div>
+        <div class="stats" data-reveal="up" style="--d:.5s">
+          <div class="stat"><i class="fa-solid fa-trophy"></i><div><b><span data-count="12">0</span>+</b><small>Years Experience</small></div></div>
+          <div class="stat"><i class="fa-solid fa-users"></i><div><b><span data-count="600">0</span>+</b><small>Workshops Conducted</small></div></div>
+          <div class="stat"><i class="fa-solid fa-star"></i><div><b><span data-count="1000" data-comma="1">0</span>+</b><small>People Empowered</small></div></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-media" data-reveal="right" style="--d:.2s">
+          <div class="badge-float"><div><span>12+</span><small>YEARS</small></div></div>
+          <div class="float-card">
+            <img src="chirag.jpg" alt="Chirag Salvi" onerror="this.style.visibility='hidden'">
+            <div><b>Chirag Salvi</b><small>Coach &amp; Founder</small></div>
+          </div>
+          <div class="hero-frame">
+            <img src="hero.webp" alt="Chirag Salvi with his students and the Indian flag" onerror="this.style.visibility='hidden'">
+            <div class="hero-cap"><i class="fa-solid fa-medal"></i>Coaching &bull; Mentoring &bull; Empowering</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + COMPETENCIES -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-3 col-md-4" data-reveal="zoom">
+        <div class="profile-wrap"><img src="chirag.jpg" alt="Chirag Salvi" onerror="this.style.visibility='hidden'"></div>
+      </div>
+      <div class="col-lg-5 col-md-8" data-reveal="up" style="--d:.1s">
+        <div class="about-mid">
+          <span class="eyebrow">Get to know me</span>
+          <h2 class="sec-title">About <span class="accent">Me</span></h2>
+          <p>I'm Chirag Salvi, a Professional Martial Arts Coach and Self-Defense Educator with over 12 years of experience in training individuals, corporates, and institutions in real-world safety, combat readiness, and performance conditioning.</p>
+          <p>As the Founder of Battle Fit &amp; Battle Fit Academy, I have successfully conducted more than 600+ self-defense workshops and awareness programs across the corporate, educational, and NGO sectors, empowering over 1,000+ professionals, students, and athletes.</p>
+          <p class="mb-0">My teaching approach blends Judo, Krav Maga, Kickboxing, Kalaripayattu, and Functional Fitness, focusing on awareness, adaptability, and control.</p>
+          <div class="facts">
+            <span><i class="fa-solid fa-location-dot"></i> Mumbai, India</span>
+            <span><i class="fa-solid fa-shield-halved"></i> Founder, Battle Fit Academy</span>
+            <span><i class="fa-solid fa-graduation-cap"></i> M.PEd</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-reveal="right" style="--d:.2s">
+        <h2 class="sec-title">Core <span class="accent">Competencies</span></h2>
+        <ul class="comp-list">
+          <li><span class="ic"><i class="fa-solid fa-people-group"></i></span>Corporate &amp; Workplace<br>Self-Defense Training</li>
+          <li><span class="ic"><i class="fa-solid fa-person-dress"></i></span>Women's Safety &amp;<br>Empowerment Workshops</li>
+          <li><span class="ic"><i class="fa-solid fa-dumbbell"></i></span>Functional Fitness &amp;<br>Mobility Coaching</li>
+          <li><span class="ic"><i class="fa-solid fa-brain"></i></span>Stress Management &amp;<br>Mental Readiness</li>
+          <li><span class="ic"><i class="fa-solid fa-person-running"></i></span>Combat Sports Mentorship &amp;<br>Athlete Development</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS + EDUCATION -->
+<section class="highlights">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6" data-reveal="left" id="highlights">
+        <div class="hl-col">
+          <h2 class="sec-title">Professional <span class="accent">Highlights</span></h2>
+          <ul class="check-list">
+            <li>Conducted 600+ Self-Defense Workshops across India</li>
+            <li>Trained Actor &amp; Singer Diljit Dosanjh for the Bollywood film “Arjun Patiala”</li>
+            <li>Mentored more Than 300+ Combat Athletes</li>
+            <li>Technical Committee Chairman – K-1 India Federation (2022–2024)</li>
+            <li>Head of Grappling Department – Combat Fit Pro Course ( 2023 - 2026 )</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6" data-reveal="right" id="education">
+        <h2 class="sec-title">Education &amp; <span class="accent">Certifications</span></h2>
+        <div class="row g-3">
+          <div class="col-md-5">
+            <div class="edu-card edu">
+              <h4><i class="fa-solid fa-graduation-cap"></i> Education</h4>
+              <p class="mb-0">M.PEd (Master of Physical Education)<br>– Singhania University<br>(2022–2025)</p>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="edu-card cert">
+              <h4><i class="fa-solid fa-user-ninja"></i> Certifications &amp; Recognitions</h4>
+              <ul class="dot-list mb-0">
+                <li>Ni-Dan (Grade 2 Black Belt, Judo – 2019)</li>
+                <li>1st Degree Black Belt – Kapap Krav Maga</li>
+                <li>Level 2 – Kalaripayattu</li>
+                <li>Grade 1 Black Belt – Kickboxing</li>
+                <li>Certified Fitness Trainer – Tulip international (2019)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKED WITH -->
+<section class="worked" id="collaborations">
+  <div class="container">
+    <h2 class="sec-title" data-reveal="up">Worked With <span class="accent" style="font-size:1.35rem">(Corporate &amp; Institutional Collaborations)</span></h2>
+    <div class="row g-4">
+      <div class="col-lg-6" data-reveal="up">
+        <div class="col-split">
+          <ul class="check-list">
+            <li><b>Reliance Industries Limited</b> : Self-Defence Training for Reliance Cadets</li>
+            <li><b>Mahetik Entertainment</b> – Employee Safety &amp; Awareness Workshops for Events Live Shows</li>
+            <li><b>NGOs &amp; Foundations</b> – Stairs Foundation, Salaam Baalak Trust ,Shiv Sena and local women empowerment groups</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6" data-reveal="up" style="--d:.15s">
+        <ul class="check-list">
+          <li><b>Greeksoft Technology</b> – Women's Safety &amp; Awareness Workshops</li>
+          <li><b>Educational Institutions</b> – J D Barda School , Sydenham College, Elphinstone College, Lala College</li>
+          <li><b>Lions Clubs</b> – Community Self-Defense Campaigns</li>
+          <li><b>Brihanmumbai Municipal Corporation</b> – Kids &amp; Teen Safety Drives</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+  <div class="phil-bg" id="philBg"></div>
+  <i class="fa-solid fa-yin-yang phil-icon"></i>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-1" data-reveal="up">
+        <h2>Training <span class="accent">Philosophy</span></h2>
+        <blockquote>
+          <span class="q open">“</span>
+          Self-defense is not about fighting — it's about being aware, confident, and ready to act. My mission is to help people move, think, and live strong — both on and off the mat.
+          <span class="q close">”</span>
+        </blockquote>
+        <div class="sign">Chirag Salvi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-card" data-reveal="up">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <span class="eyebrow">Let's talk</span>
+          <h2 class="sec-title mb-2">Get in <span class="accent">Touch</span></h2>
+          <p class="mb-3 text-muted">Want a self-defense workshop for your team, school or community, or personal coaching? Reach out directly.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="https://wa.me/919820842939" target="_blank" rel="noopener" class="btn btn-bf"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp</a>
+            <a href="tel:+919820842939" class="btn btn-bf btn-ghost"><i class="fa-solid fa-phone me-1"></i> Call</a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="c-item"><i class="fa-solid fa-phone-volume"></i><div><small>Phone</small><a href="tel:+919820842939">+91 98208 42939</a></div></div>
+          <div class="c-item"><i class="fa-solid fa-envelope"></i><div><small>Email</small><a href="mailto:cvsalvi95@gmail.com">cvsalvi95@gmail.com</a> &amp; <a href="mailto:teambattlefit@gmail.com">teambattlefit@gmail.com</a></div></div>
+          <div class="c-item mb-0"><i class="fa-solid fa-location-dot"></i><div><small>Location</small>Mumbai, Maharashtra, India</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row align-items-center g-3">
+      <div class="col-md-3 f-founder">
+        <small>Founder of</small>
+        <a href="https://www.battlefitacademy.com/" target="_blank" rel="noopener"><img src="https://www.battlefitacademy.com/logo.webp" alt="Battle Fit Academy"></a>
+      </div>
+      <div class="col-md-6 text-md-center">
+        <div class="f-tag">Train Hard <span>&bull;</span> Stay Safe <span>&bull;</span> Be Strong</div>
+        <div class="f-copy">&copy; <span id="yr"></span> Chirag Salvi. All rights reserved.</div>
+      </div>
+      <div class="col-md-3 text-md-end social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/reel/DUnRzxejNGK/?igsh=MTdtaG52c29nbXdhNA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com/@battle_fit?si=5Dxr4erJYiRjOI0" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="wa" href="https://wa.me/919820842939" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>Chat with me</span></a>
+<button id="toTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // scroll reveal
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){ io.observe(el); });
+
+  // counters
+  function count(el){
+    var end = +el.dataset.count, comma = el.dataset.comma, t0 = performance.now(), dur = 1800;
+    (function step(t){
+      var p = Math.min((t - t0)/dur, 1), v = Math.floor(end * (1 - Math.pow(1 - p, 3)));
+      el.textContent = comma ? v.toLocaleString('en-IN') : v;
+      if(p < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+  var cio = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ count(e.target); cio.unobserve(e.target);} });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
+  // typed text
+  var words = ['Judo','Krav Maga','Kickboxing','Kalaripayattu','Functional Fitness'];
+  var tEl = document.getElementById('typed'), wi = 0, ci = 0, del = false;
+  (function type(){
+    var w = words[wi];
+    tEl.textContent = w.substring(0, ci);
+    if(!del && ci < w.length){ ci++; setTimeout(type, 90); }
+    else if(!del){ del = true; setTimeout(type, 1300); }
+    else if(ci > 0){ ci--; setTimeout(type, 45); }
+    else { del = false; wi = (wi + 1) % words.length; setTimeout(type, 250); }
+  })();
+
+  // save contact (vCard)
+  document.getElementById('saveContact').addEventListener('click', function(){
+    var v = ['BEGIN:VCARD','VERSION:3.0','FN:Chirag Salvi','N:Salvi;Chirag;;;',
+      'ORG:Battle Fit Academy','TITLE:Martial Arts Coach & Self-Defense Educator',
+      'TEL;TYPE=CELL:+919820842939','EMAIL:cvsalvi95@gmail.com','EMAIL:teambattlefit@gmail.com',
+      'ADR;TYPE=WORK:;;;Mumbai;Maharashtra;;India','URL:https://www.battlefitacademy.com/','END:VCARD'].join('\r\n');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([v], {type:'text/vcard'}));
+    a.download = 'Chirag-Salvi.vcf';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  // scroll effects
+  var nav = document.querySelector('.navbar'), bar = document.getElementById('progress'),
+      top = document.getElementById('toTop'), pbg = document.getElementById('philBg'),
+      phil = document.querySelector('.philosophy');
+  function onScroll(){
+    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (y / h * 100) + '%';
+    nav.classList.toggle('scrolled', y > 10);
+    top.classList.toggle('show', y > 500);
+    var r = phil.getBoundingClientRect();
+    if(r.top < innerHeight && r.bottom > 0){ pbg.style.transform = 'translateY(' + (r.top * -.12) + 'px)'; }
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  top.addEventListener('click', function(){ scrollTo({top:0, behavior:'smooth'}); });
+
+  // scroll spy
+  var links = [].slice.call(document.querySelectorAll('.nav-link[href^="#"]'));
+  var spy = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(function(a){ var s = document.querySelector(a.getAttribute('href')); if(s) spy.observe(s); });
+
+  // close mobile menu on click
+  document.querySelectorAll('#nav .nav-link').forEach(function(l){
+    l.addEventListener('click', function(){
+      var c = document.getElementById('nav');
+      if(c.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(c).hide();
+    });
+  });
+})();
+</script>
+</body>
+</html>
